@@ -2,9 +2,10 @@ source $stdenv/setup
 
 tar zxvf $src
 
-cd binutils-*
+mkdir build-binutils
+cd build-binutils
 
-./configure --target=i686-elf --prefix=$out --with-sysroot --disable-nls --disable-werror
+../binutils-*/configure --target=i686-elf --prefix=$out --with-sysroot --disable-nls --disable-werror
 
 make
 make install
