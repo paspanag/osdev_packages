@@ -6,9 +6,9 @@ let
 	callPackage = pkgs.lib.callPackageWith (pkgs // self);
 	self = {
 
-		i686-binutils = callPackage ./cross/i686-binutils {};
+		i686binutils = callPackage ./cross/i686binutils {};
 
-		i686-gcc = callPackage ./cross/i686-gcc {};
+		i686gcc = callPackage ./cross/i686gcc {};
 	};
 
 in
